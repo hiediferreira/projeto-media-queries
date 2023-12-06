@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+/* Configurações Globais */
+/* Versão Mobile First */
+@media all {
+    * {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1em;
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+
+    html {
+        height: 100vh;   
+    }
+
+    body {
+        background: black url(../imagens/back-phone.jpg) no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    main {
+        background-color: rgba(255, 255, 255, 0.801);
+        width: 90vw;
+        margin: auto;         /*centralizado*/
+        border-radius: 10px;  /*borda redonda*/
+        padding: 10px;
+        margin-top: 20px; /*Afastar do topo*/
+    }
+
+    h1 {
+        text-align: center;
+        color: white;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.822);
+        font-size: 2em;
+    }
+
+    img {
+        display: block;
+        margin: auto;
+    }
+
+    img#phone {display: block;}
+    img#tablet {display: none;}
+    img#print {display: none;}    
+    img#pc {display: none;}
+    img#tv {display: none;}
+}
+
+/* Demais Configurações */
+@media print {  
+    * {
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    body {
+        background-image: url(../imagens/back-print.jpg);
+    } 
+
+    main {
+        border: 2px solid black;
+    }
+
+    main h1 {
+        text-shadow: none;
+        color: black;
+    }
+
+    img#phone {display: none;}
+    img#tablet {display: none;}
+    img#print {display: block;}    
+    img#pc {display: none;}
+    img#tv {display: none;}
+}
+
+@media screen and (min-width:768px) and (max-width:992px) { 
+    /* Tablet */
+    body {
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+
+    img#phone {display: none;}
+    img#tablet {display: block;}
+    img#print {display: none;}    
+    img#pc {display: none;}
+    img#tv {display: none;}
+}
+
+@media screen and (min-width:993px) and (max-width:1199px) { 
+    /* Desktop */ 
+    body {
+        background-image: url(../imagens/back-pc.jpg);
+    } 
+    
+    img#phone {display: none;}
+    img#tablet {display: none;}
+    img#print {display: none;}    
+    img#pc {display: block;}
+    img#tv {display: none;}
+}
+
+@media screen and (min-width:1200px) {  
+    /* TV */  
+    body {
+        background-image: url(../imagens/back-tv.jpg);
+    }
+
+    img#phone {display: none;}
+    img#tablet {display: none;}
+    img#print {display: none;}    
+    img#pc {display: none;}
+    img#tv {display: block;}
+}
